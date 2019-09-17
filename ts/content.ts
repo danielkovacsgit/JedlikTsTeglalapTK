@@ -28,8 +28,9 @@ export default class Content {
         res.write("<p>b= ");
         res.write(`<input type= 'number' name="bInput" value=${b} onChange='this.form.submit=();'></p>`);
         res.write(`<p2>b=${b}</p2>`);
-        const terulet: number = a * b;
-        const kerulet: number = 2 * (a * b);
+        let terulet: number; //deklaráció
+        terulet = a * b; //értékadás
+        const kerulet: number = 2 * (a * b); //definíció = dekl. + értékadás
         res.write(`<p2>a=${terulet}</p2>`);
         res.write(`<p2>a=${kerulet}</p2>`);
         res.write("</form></body> </html>");
